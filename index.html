@@ -4,75 +4,175 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DJ Martin Castillo</title>
+    <title>MartinDJ</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <!-- Encabezado -->
+    <!-- Encabezado con logo y navegación -->
     <header>
-        <h1>DJ Martin Castillo - Eventos</h1>
-        <p>Expertos en sonido y entretenimiento para eventos inolvidables</p>
+        <div class="container">
+            <h1 class="logo">Martin Castillo DJ - Eventos</h1>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#home">Inicio</a></li>
+                    <li><a href="#about">Sobre Nosotros</a></li>
+                    <li><a href="#services">Servicios</a></li>
+                    <li><a href="#gallery">Galería</a></li>
+                    <li><a href="#testimonials">Testimonios</a></li>
+                    <li><a href="#contact">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <!-- Navegación -->
-    <nav>
-        <a href="#servicios">Servicios</a>
-        <a href="#galeria">Galería</a>
-        <a href="#contacto">Contacto</a>
-    </nav>
+    <!-- Sección de inicio con imagen de fondo -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2>Experiencia Inigualable en Sonido</h2>
+            <p>Hacemos que tus eventos sean inolvidables con el mejor sonido y ambiente.</p>
+            <a href="#services" class="btn">Conoce Nuestros Servicios</a>
+        </div>
+    </section>
 
-    <!-- Sección de Servicios -->
-    <section id="servicios">
-        <h2>Servicios</h2>
-        <div class="servicios-container">
-            <div class="servicio">
-                <h3>Eventos Privados</h3>
-                <p>Sonido profesional para bodas, fiestas privadas y más.</p>
-            </div>
-            <div class="servicio">
-                <h3>Alquiler de Equipos</h3>
-                <p>Ofrecemos todo lo necesario para tu evento, desde altavoces hasta luces.</p>
-            </div>
-            <div class="servicio">
-                <h3>Fiestas Corporativas</h3>
-                <p>Organización y sonido para eventos empresariales.</p>
-            </div>
-            <div class="servicio">
-                <h3>Sonido para Conciertos</h3>
-                <p>Equipos de sonido para conciertos en vivo y festivales.</p>
+    <!-- Sección Sobre Nosotros -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>Sobre Nosotros</h2>
+            <p>Somos una empresa de sonido profesional con años de experiencia en el sector de eventos y
+                entretenimiento. Nos especializamos en crear ambientes únicos y personalizados para cada evento.</p>
+        </div>
+    </section>
+
+    <!-- Sección Servicios -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Servicios</h2>
+            <div class="service-list">
+                <div class="service-item">
+                    <h3>Sonido para Eventos</h3>
+                    <p>Sonido de alta calidad para bodas, fiestas y eventos corporativos.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Iluminación Profesional</h3>
+                    <p>Creamos ambientes visuales espectaculares con iluminación de última tecnología.</p>
+                </div>
+                <div class="service-item">
+                    <h3>DJ y Animación</h3>
+                    <p>Contamos con DJs experimentados que animarán cualquier tipo de evento.</p>
+                </div>
             </div>
         </div>
     </section>
 
+    <!-- Sección Galería -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2>Galería</h2>
+            <div class="gallery-grid">
+                <!-- Imágenes con una clase específica para el tamaño uniforme -->
+                <img src="/Imagenes/IMG-20241103-WA0014.jpg" alt="Evento 1" class="gallery-image">
+                <img src="/Imagenes/IMG-20241103-WA0015.jpg" alt="Evento 2" class="gallery-image">
+                <img src="/Imagenes/IMG-20241103-WA0016.jpg" alt="Evento 3" class="gallery-image">
+                <img src="/Imagenes/IMG-20241103-WA0017.jpg" alt="Evento 4" class="gallery-image">
+            </div>
 
-    <!-- Galería de Fotos -->
-    <section id="galeria">
-        <h2>Galería</h2>
-        <div class="imagenes">
-            <video src="/Ejemplo2/Videos/WhatsApp Video 2024-11-03 at 7.01.25 PM.mp4" alt="Pool Party" controls></video>
-            <video src="/Ejemplo2/Videos/WhatsApp Video 2024-11-03 at 7.01.25 PM (1).mp4" alt="Fiesta de 15"
-                controls></video>
+            <!-- Contenedor para centrar los videos -->
+            <div class="gallery-videos">
+                <video controls class="gallery-video">
+                    <source src="/Videos/WhatsApp Video 2024-11-03 at 7.01.25 PM.mp4" type="video/mp4">
+                    Tu navegador no soporta este formato de video.
+                </video>
+                <video controls class="gallery-video">
+                    <source src="/Videos/WhatsApp Video 2024-11-03 at 7.01.48 PM.mp4" type="video/mp4">
+                    Tu navegador no soporta este formato de video.
+                </video>
+            </div>
+        </div>
+
+        <!-- Modal para reproducir el video en grande -->
+        <div id="videoModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <video id="modalVideo" controls autoplay></video>
+            </div>
+        </div>
+    </section>
+    <!-- Sección Testimonios -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2>Testimonios</h2>
+            <div class="testimonial-list">
+                <div class="testimonial-item">
+                    <p>"El mejor sonido que he escuchado en un evento, hicieron que mi boda fuera perfecta."</p>
+                    <h4>- Cliente Satisfecho</h4>
+                </div>
+                <div class="testimonial-item">
+                    <p>"La iluminación y la música crearon una atmósfera espectacular. ¡Muy recomendados!"</p>
+                    <h4>- Empresa XYZ</h4>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Sección de Contacto -->
-    <section id="contacto">
-        <h2>Contacto</h2>
-        <p>¿Tienes preguntas o quieres reservar un servicio? Contáctanos a través de:</p>
-        <div class="contacto-links">
-            <a href="https://www.instagram.com/tu_usuario" target="_blank">Instagram</a>
-            <a href="tel:+1234567890">Teléfono: +1234567890</a>
-            <a href="mailto:castillomartindj@gmail.com">Correo Electrónico</a>
-
+    <!-- Sección Contacto -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contacto</h2>
+            <form action="enviar-email.php" method="POST">
+                <input type="text" name="nombre" placeholder="Nombre" required>
+                <input type="email" name="email" placeholder="Correo Electrónico" required>
+                <textarea name="mensaje" placeholder="Tu mensaje" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
         </div>
     </section>
 
-
-    <!-- Pie de Página -->
+    <!-- Pie de página -->
     <footer>
-        <p>&copy; 2024 Nombre de la Empresa. Todos los derechos reservados.</p>
+        <div class="container">
+            <p>&copy; 2024 Martin Castillo DJ - Eventos. Todos los derechos reservados.</p>
+            <div class="social-links">
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+                <a href="#">Twitter</a>
+            </div>
+        </div>
     </footer>
 </body>
+
+<script>
+    // Obtener elementos del DOM
+    const videoThumbnails = document.querySelectorAll('.video-thumbnail');
+    const modal = document.getElementById('videoModal');
+    const modalVideo = document.getElementById('modalVideo');
+    const closeModal = document.querySelector('.close');
+
+    // Abrir modal y reproducir el video seleccionado
+    videoThumbnails.forEach(thumbnail => {
+        thumbnail.addEventListener('click', function () {
+            const videoSrc = this.getAttribute('data-video');
+            modalVideo.src = videoSrc; // Asigna el video al elemento modal
+            modal.style.display = 'block';
+            modalVideo.play();
+        });
+    });
+
+    // Cerrar modal
+    closeModal.addEventListener('click', function () {
+        modal.style.display = 'none';
+        modalVideo.pause();
+        modalVideo.src = ''; // Detener el video
+    });
+
+    // Cerrar modal al hacer clic fuera del contenido
+    window.addEventListener('click', function (event) {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+            modalVideo.pause();
+            modalVideo.src = '';
+        }
+    });
+</script>
 
 </html>
